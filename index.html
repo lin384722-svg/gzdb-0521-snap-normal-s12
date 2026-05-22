@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>春12期 正常班快照（0521）</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;background:#f0f4fa;color:#1a2744;font-size:14px;}
+.header{background:linear-gradient(135deg,#1a3a6b,#0f2548);color:#fff;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.badge{background:rgba(255,255,255,.15);border-radius:20px;padding:4px 14px;font-size:12px;}
+.kpi-bar{display:flex;flex-wrap:wrap;gap:12px;padding:16px 24px;background:#fff;border-bottom:1px solid #e2e8f0;}
+.kpi{flex:1;min-width:130px;background:#f0f4fa;border-radius:10px;padding:12px 16px;border-left:3px solid #1a3a6b;}
+.kpi.accent{border-left-color:#2563eb;background:#eff6ff;}
+.kpi .label{font-size:11px;color:#718096;margin-bottom:4px;}
+.kpi .value{font-size:22px;font-weight:700;color:#1a3a6b;}
+.kpi.accent .value{color:#1d4ed8;}
+.kpi .sub{font-size:11px;color:#a0aec0;}
+.section{margin:16px 24px 0;}
+.stitle{font-size:13px;font-weight:700;color:#1a3a6b;border-left:3px solid #1a3a6b;padding-left:8px;margin-bottom:10px;}
+.card{background:#fff;border-radius:10px;padding:14px;margin-bottom:16px;box-shadow:0 1px 4px rgba(26,58,107,.07);}
+.divider{border:none;border-top:2px dashed #e2e8f0;margin:8px 0 16px;}
+table{width:100%;border-collapse:collapse;font-size:13px;}
+th{background:#f0f4fa;color:#4a6fa5;font-weight:600;padding:8px 10px;text-align:right;white-space:nowrap;}
+th:first-child{text-align:left;}
+td{padding:7px 10px;border-bottom:1px solid #f0f4fa;text-align:right;white-space:nowrap;}
+td:first-child{text-align:left;font-weight:500;}
+tr:last-child td{border-bottom:none;}
+tr:hover td{background:#f7f9fc;}
+.pw{background:#e8eef8;border-radius:6px;height:10px;overflow:hidden;margin:2px 0;}
+.pb{height:10px;border-radius:6px;background:linear-gradient(90deg,#2d5aa0,#1a3a6b);}
+.pb.warn{background:linear-gradient(90deg,#e2a03f,#c07a1a);}
+.tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:600;}
+.tag-blue{background:#dbeafe;color:#1e40af;}
+.tag-green{background:#dcfce7;color:#15803d;}
+.tag-orange{background:#ffedd5;color:#c2410c;}
+.tag-red{background:#fee2e2;color:#b91c1c;}
+details{width:100%;margin-bottom:8px;}
+summary{cursor:pointer;padding:6px 0;font-weight:600;color:#1a3a6b;list-style:none;display:flex;align-items:center;gap:6px;}
+summary::-webkit-details-marker{display:none;}
+summary::before{content:'\25B6';font-size:10px;}
+details[open] summary::before{content:'\25BC';}
+.two-col{display:flex;gap:16px;flex-wrap:wrap;}
+.two-col>div{flex:1;min-width:200px;}
+.city-bw{display:flex;align-items:center;gap:8px;margin-bottom:6px;}
+.city-lbl{min-width:70px;font-size:12px;color:#4a5568;text-align:right;}
+.city-b{height:26px;border-radius:4px;display:flex;align-items:center;padding-left:8px;font-size:12px;color:#fff;font-weight:600;min-width:30px;}
+.ov{overflow-x:auto;}
+.section-group{background:#e8f0fd;border-radius:6px;padding:6px 10px;margin-bottom:6px;font-size:12px;font-weight:600;color:#1a3a6b;}
+@media(max-width:600px){
+  .kpi{min-width:calc(50% - 6px);}
+  .section{margin:12px 12px 0;}
+  td,th{padding:6px 6px;font-size:12px;}
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <div style="font-size:20px;font-weight:700;">达播春12期 · 正常班快照（0521）</div>
+    <div style="font-size:13px;opacity:.8;margin-top:4px;">口径：期数=12 | 当日：2026-05-21 | 累计：0514-0521</div>
+  </div>
+  <div class="badge">总目标 3300</div>
+</div>
+
+<!-- ===== 第一部分：春12整体KPI ===== -->
+<div class="section" style="margin-top:16px">
+<div class="stitle">🏆 第一部分 · 春12整体 KPI（0514-0521累计）</div>
+</div>
+<div class="kpi-bar" style="background:#f7faff;border-bottom:none;padding:12px 24px;">
+  <div class="kpi accent"><div class="label">累计正常班进量</div><div class="value">1688</div><div class="sub">目标达成 51.2% / 3300</div></div>
+  <div class="kpi accent"><div class="label">T+2活跃率</div><div class="value">53.6%</div><div class="sub">活跃 905 / 1688</div></div>
+  <div class="kpi"><div class="label">总订单（含退）</div><div class="value">2389</div><div class="sub">未退款 1830</div></div>
+  <div class="kpi"><div class="label">退款率</div><div class="value">23.4%</div><div class="sub">退款 559 单</div></div>
+  <div class="kpi"><div class="label">加微率</div><div class="value">82.5%</div><div class="sub">主动加微 1121 人</div></div>
+  <div class="kpi"><div class="label">主动加微率</div><div class="value">66.4%</div><div class="sub">影子班 141（撞库 7.7%）</div></div>
+</div>
+
+<!-- 年级达成 -->
+<div class="section">
+<div class="stitle">① amaze实时进量（春12累计，正常班）</div>
+<div class="card ov">
+<table>
+<thead><tr><th>年级</th><th>实时进量</th><th>目标</th><th>进度达成</th><th style="text-align:left;min-width:120px">进度条</th></tr></thead>
+<tbody>
+<tr><td>新高一</td><td>1494</td><td>2805</td><td><span class="tag tag-blue">53.3%</span></td><td style="text-align:left"><div class="pw"><div class="pb " style="width:53.3%"></div></div></td></tr><tr><td>新高二</td><td>133</td><td>330</td><td><span class="tag tag-orange">40.3%</span></td><td style="text-align:left"><div class="pw"><div class="pb " style="width:40.3%"></div></div></td></tr><tr><td>新高三</td><td>61</td><td>165</td><td><span class="tag tag-orange">37.0%</span></td><td style="text-align:left"><div class="pw"><div class="pb warn" style="width:37.0%"></div></div></td></tr>
+<tr style="font-weight:700;background:#f0f4fa"><td>合计</td><td>1688</td><td>3300</td><td><span class="tag tag-blue">51.2%</span></td><td style="text-align:left"><div class="pw"><div class="pb" style="width:51.2%"></div></div></td></tr>
+</tbody></table>
+</div></div>
+
+<!-- 春12渠道汇总（累计） -->
+<div class="section">
+<div class="stitle">② 春12渠道汇总（累计，含撞库/T+2）</div>
+<div class="card ov">
+<table>
+<thead><tr><th>渠道</th><th>正常班</th><th>影子班</th><th>退款率</th><th>主动加微率</th><th>T+2率</th></tr></thead>
+<tbody>
+<tr><td><span class="tag tag-blue">最小年轮</span></td><td>1606</td><td>127</td><td >23.1%</td><td style="color:#e53e3e;font-weight:600">66.2%</td><td>54.1%</td></tr><tr><td><span class="tag tag-blue">自然流</span></td><td>40</td><td>14</td><td >16.9%</td><td >72.5%</td><td>47.5%</td></tr><tr><td><span class="tag tag-blue">格物致知</span></td><td>15</td><td>0</td><td style="color:#e53e3e;font-weight:600">34.8%</td><td style="color:#e53e3e;font-weight:600">60.0%</td><td>33.3%</td></tr><tr><td><span class="tag tag-blue">领航</span></td><td>13</td><td>0</td><td >18.8%</td><td >84.6%</td><td>46.2%</td></tr><tr><td><span class="tag tag-blue">合肥徽起</span></td><td>9</td><td>0</td><td style="color:#e53e3e;font-weight:600">47.1%</td><td style="color:#e53e3e;font-weight:600">55.6%</td><td>44.4%</td></tr><tr><td><span class="tag tag-blue">山东深山</span></td><td>4</td><td>0</td><td style="color:#e53e3e;font-weight:600">63.6%</td><td >75.0%</td><td>50.0%</td></tr><tr><td><span class="tag tag-blue">申坤</span></td><td>1</td><td>0</td><td >0.0%</td><td >100.0%</td><td>0.0%</td></tr>
+<tr style="font-weight:700;background:#f0f4fa"><td>大盘</td><td>1688</td><td>141</td><td>23.4%</td><td>66.4%</td><td>53.6%</td></tr>
+</tbody></table>
+</div></div>
+
+<!-- ③ 年级流量达成 -->
+<div class="section">
+<div class="stitle">③ 年级流量达成 T+1（春12累计）</div>
+<div class="card ov">
+<table>
+<thead><tr><th>年级</th><th>预估流量</th><th>总进度</th><th>实际流速<br><small>近3日均</small></th><th>总进量</th><th>今日进量</th></tr></thead>
+<tbody>
+<tr><td>新高一</td><td>2805</td><td><span class="tag tag-blue">53.3%</span></td><td>170/天</td><td>1494</td><td>81</td></tr><tr><td>新高二</td><td>330</td><td><span class="tag tag-blue">40.3%</span></td><td>13/天</td><td>133</td><td>3</td></tr><tr><td>新高三</td><td>165</td><td><span class="tag tag-blue">37.0%</span></td><td>7/天</td><td>61</td><td>0</td></tr>
+<tr style="font-weight:700;background:#f0f4fa"><td>合计</td><td>3300</td><td><span class="tag tag-blue">51.2%</span></td><td>190/天</td><td>1688</td><td>84</td></tr>
+</tbody></table>
+</div></div>
+
+<hr class="divider">
+
+<!-- ===== 第二部分：0521当日快照 ===== -->
+<div class="section">
+<div class="stitle">📅 第二部分 · 0521当日快照（春12）</div>
+</div>
+<div class="kpi-bar" style="background:#f7faff;border-bottom:none;padding:12px 24px;">
+  <div class="kpi accent"><div class="label">当日正常班进量</div><div class="value">84</div><div class="sub">影子班 9</div></div>
+  <div class="kpi"><div class="label">总订单（含退）</div><div class="value">109</div><div class="sub">未退款 93</div></div>
+  <div class="kpi"><div class="label">退款率（当日）</div><div class="value">14.7%</div><div class="sub">退款 16 单</div></div>
+  <div class="kpi"><div class="label">加微率</div><div class="value">76.2%</div><div class="sub">加微 64 人</div></div>
+  <div class="kpi"><div class="label">主动加微率</div><div class="value">60.7%</div><div class="sub">主动加微 51 人</div></div>
+</div>
+
+<!-- ④ 渠道对比（当日） -->
+<div class="section">
+<div class="stitle">④ 渠道对比表（0521当日）</div>
+<div class="card ov">
+<table>
+<thead><tr><th>渠道</th><th>正常班</th><th>加微率</th><th>主动加微率</th><th>退款率</th></tr></thead>
+<tbody>
+<tr><td><span class="tag tag-blue">最小年轮</span></td><td>76</td><td>78.9%</td><td >63.2%</td><td style="color:#e53e3e;font-weight:600">15.6%</td></tr><tr><td><span class="tag tag-blue">自然流</span></td><td>8</td><td>50.0%</td><td style="color:#e53e3e;font-weight:600">37.5%</td><td >7.7%</td></tr>
+<tr style="font-weight:700;background:#f0f4fa"><td>大盘</td><td>84</td><td>76.2%</td><td>60.7%</td><td>14.7%</td></tr>
+</tbody></table>
+</div></div>
+
+<!-- ⑤ 渠道×年级（当日） -->
+<div class="section">
+<div class="stitle">⑤ 渠道和年级进量（0521当日）</div>
+<div class="card ov">
+<table>
+<thead><tr><th>渠道</th><th>新高一</th><th>新高二</th><th>新高三</th><th>小计</th></tr></thead>
+<tbody>
+<tr><td>最小年轮</td><td>74</td><td>2</td><td>0</td><td><strong>76</strong></td></tr><tr><td>自然流</td><td>7</td><td>1</td><td>0</td><td><strong>8</strong></td></tr>
+<tr style="font-weight:700;background:#f0f4fa"><td>合计</td><td>81</td><td>3</td><td>0</td><td>84</td></tr>
+</tbody></table>
+</div></div>
+
+<!-- ⑥ 达人（当日） -->
+<div class="section">
+<div class="stitle">⑥ 分达人进量（0521当日，按渠道折叠）</div>
+<div class="card">
+<details><summary><span class="tag tag-blue">最小年轮</span>&nbsp;正常班 76 单</summary><div class="ov" style="margin-top:6px"><table style="width:100%"><thead><tr><th>达人</th><th>正常班</th><th>加微率</th><th>主动加微率</th><th>退款率</th></tr></thead><tbody><tr><td>李老师讲初升高</td><td>32</td><td>78.1%</td><td >62.5%</td><td >10.5%</td></tr><tr><td>千佰惠公司聂老师</td><td>12</td><td>75.0%</td><td >66.7%</td><td >7.7%</td></tr><tr><td>李主任聊升学</td><td>10</td><td>80.0%</td><td style="color:#e53e3e;font-weight:600">60.0%</td><td style="color:#e53e3e;font-weight:600">26.7%</td></tr><tr><td>王老师说选科</td><td>6</td><td>83.3%</td><td >66.7%</td><td >14.3%</td></tr><tr><td>慧智升学</td><td>5</td><td>80.0%</td><td style="color:#e53e3e;font-weight:600">60.0%</td><td >0.0%</td></tr><tr><td>初升高规划闫老师</td><td>4</td><td>100.0%</td><td >75.0%</td><td style="color:#e53e3e;font-weight:600">33.3%</td></tr><tr><td>郝老师聊选科-行知</td><td>3</td><td>66.7%</td><td >66.7%</td><td style="color:#e53e3e;font-weight:600">25.0%</td></tr><tr><td>高步云衢</td><td>3</td><td>66.7%</td><td style="color:#e53e3e;font-weight:600">33.3%</td><td style="color:#e53e3e;font-weight:600">25.0%</td></tr><tr><td>慧智升学平台规划</td><td>1</td><td>100.0%</td><td >100.0%</td><td style="color:#e53e3e;font-weight:600">50.0%</td></tr></tbody></table></div></details><details><summary><span class="tag tag-blue">自然流</span>&nbsp;正常班 8 单</summary><div class="ov" style="margin-top:6px"><table style="width:100%"><thead><tr><th>达人</th><th>正常班</th><th>加微率</th><th>主动加微率</th><th>退款率</th></tr></thead><tbody><tr><td>（未知）</td><td>8</td><td>50.0%</td><td style="color:#e53e3e;font-weight:600">37.5%</td><td >7.7%</td></tr></tbody></table></div></details>
+</div></div>
+
+<hr class="divider">
+
+<!-- ===== 第三部分：春12整体汇总 ===== -->
+<div class="section">
+<div class="stitle">📊 第三部分 · 春12整体数据汇总</div>
+</div>
+
+<!-- 每日趋势 -->
+<div class="section">
+<div class="stitle">⑦ 每日正常班进量趋势（春12）</div>
+<div class="card ov">
+<table>
+<thead><tr><th>05-14</th><th>05-15</th><th>05-16</th><th>05-17</th><th>05-18</th><th>05-19</th><th>05-20</th><th>05-21</th></tr></thead>
+<tbody><tr><td><strong>149</strong></td><td><strong>241</strong></td><td><strong>212</strong></td><td><strong>246</strong></td><td><strong>270</strong></td><td><strong>276</strong></td><td><strong>210</strong></td><td><strong>84</strong></td></tr></tbody>
+</table>
+</div></div>
+
+<!-- ⑧ T+2活跃 -->
+<div class="section">
+<div class="stitle">⑧ T+2活跃率（春12累计正常班）</div>
+<div class="card">
+<div class="two-col">
+<div>
+<div style="font-size:12px;color:#718096;margin-bottom:8px;font-weight:600">按渠道</div>
+<div style="margin-bottom:6px"><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:2px"><span>最小年轮</span><span>869/1606 <strong>54.1%</strong></span></div><div class="pw"><div class="pb" style="width:54.1%"></div></div></div><div style="margin-bottom:6px"><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:2px"><span>自然流</span><span>19/40 <strong>47.5%</strong></span></div><div class="pw"><div class="pb" style="width:47.5%"></div></div></div><div style="margin-bottom:6px"><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:2px"><span>格物致知</span><span>5/15 <strong>33.3%</strong></span></div><div class="pw"><div class="pb" style="width:33.3%"></div></div></div><div style="margin-bottom:6px"><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:2px"><span>领航</span><span>6/13 <strong>46.2%</strong></span></div><div class="pw"><div class="pb" style="width:46.2%"></div></div></div><div style="margin-bottom:6px"><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:2px"><span>合肥徽起</span><span>4/9 <strong>44.4%</strong></span></div><div class="pw"><div class="pb" style="width:44.4%"></div></div></div><div style="margin-bottom:6px"><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:2px"><span>山东深山</span><span>2/4 <strong>50.0%</strong></span></div><div class="pw"><div class="pb" style="width:50.0%"></div></div></div><div style="margin-bottom:6px"><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:2px"><span>申坤</span><span>0/1 <strong>0.0%</strong></span></div><div class="pw"><div class="pb" style="width:0.0%"></div></div></div>
+</div>
+<div>
+<div style="font-size:12px;color:#718096;margin-bottom:8px;font-weight:600">按年级</div>
+<div style="margin-bottom:6px"><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:2px"><span>新高一</span><span>832/1494 <strong>55.7%</strong></span></div><div class="pw"><div class="pb" style="width:55.7%"></div></div></div><div style="margin-bottom:6px"><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:2px"><span>新高二</span><span>51/133 <strong>38.3%</strong></span></div><div class="pw"><div class="pb" style="width:38.3%"></div></div></div><div style="margin-bottom:6px"><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:2px"><span>新高三</span><span>22/61 <strong>36.1%</strong></span></div><div class="pw"><div class="pb" style="width:36.1%"></div></div></div>
+</div>
+</div>
+</div></div>
+
+<!-- ⑨ 城市线级 -->
+<div class="section" style="padding-bottom:24px">
+<div class="stitle">⑨ 城市线级分布（0521当日，春12）</div>
+<div class="card">
+<div class="city-bw"><div class="city-lbl">一线城市</div><div class="city-b" style="width:30%;background:#1a3a6b">3</div></div><div class="city-bw"><div class="city-lbl">新一线</div><div class="city-b" style="width:69%;background:#2d5aa0">17</div></div><div class="city-bw"><div class="city-lbl">二线城市</div><div class="city-b" style="width:57%;background:#3b72c8">14</div></div><div class="city-bw"><div class="city-lbl">三线城市</div><div class="city-b" style="width:85%;background:#4d8bd4">21</div></div><div class="city-bw"><div class="city-lbl">四线城市</div><div class="city-b" style="width:53%;background:#6aa3de">13</div></div><div class="city-bw"><div class="city-lbl">五线城市</div><div class="city-b" style="width:65%;background:#8cbce8">16</div></div>
+<div style="font-size:11px;color:#a0aec0;text-align:right;margin-top:4px">合计 84 单</div>
+</div></div>
+
+<div style="text-align:center;color:#a0aec0;font-size:11px;padding:12px 0 24px">生成时间：2026-05-22 · 达播春12期正常班快照（0521）· 期数=12口径</div>
+</body>
+</html>
