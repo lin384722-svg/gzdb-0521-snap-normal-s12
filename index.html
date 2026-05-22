@@ -9,7 +9,7 @@
 body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;background:#f0f4fa;color:#1a2744;font-size:14px;}
 .header{background:linear-gradient(135deg,#1a3a6b,#0f2548);color:#fff;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
 .badge{background:rgba(255,255,255,.15);border-radius:20px;padding:4px 14px;font-size:12px;}
-.kpi-bar{display:flex;flex-wrap:wrap;gap:12px;padding:16px 24px;background:#fff;border-bottom:1px solid #e2e8f0;}
+.kpi-bar{display:flex;flex-wrap:wrap;gap:12px;padding:12px 24px;}
 .kpi{flex:1;min-width:130px;background:#f0f4fa;border-radius:10px;padding:12px 16px;border-left:3px solid #1a3a6b;}
 .kpi.accent{border-left-color:#2563eb;background:#eff6ff;}
 .kpi .label{font-size:11px;color:#718096;margin-bottom:4px;}
@@ -18,8 +18,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei
 .kpi .sub{font-size:11px;color:#a0aec0;}
 .section{margin:16px 24px 0;}
 .stitle{font-size:13px;font-weight:700;color:#1a3a6b;border-left:3px solid #1a3a6b;padding-left:8px;margin-bottom:10px;}
+.part-title{background:linear-gradient(90deg,#1a3a6b,#2d5aa0);color:#fff;padding:10px 24px;font-size:14px;font-weight:700;letter-spacing:.5px;margin-top:16px;}
 .card{background:#fff;border-radius:10px;padding:14px;margin-bottom:16px;box-shadow:0 1px 4px rgba(26,58,107,.07);}
-.divider{border:none;border-top:2px dashed #e2e8f0;margin:8px 0 16px;}
+.divider{border:none;border-top:2px dashed #e2e8f0;margin:4px 0 0;}
 table{width:100%;border-collapse:collapse;font-size:13px;}
 th{background:#f0f4fa;color:#4a6fa5;font-weight:600;padding:8px 10px;text-align:right;white-space:nowrap;}
 th:first-child{text-align:left;}
@@ -34,7 +35,6 @@ tr:hover td{background:#f7f9fc;}
 .tag-blue{background:#dbeafe;color:#1e40af;}
 .tag-green{background:#dcfce7;color:#15803d;}
 .tag-orange{background:#ffedd5;color:#c2410c;}
-.tag-red{background:#fee2e2;color:#b91c1c;}
 details{width:100%;margin-bottom:8px;}
 summary{cursor:pointer;padding:6px 0;font-weight:600;color:#1a3a6b;list-style:none;display:flex;align-items:center;gap:6px;}
 summary::-webkit-details-marker{display:none;}
@@ -46,11 +46,15 @@ details[open] summary::before{content:'\25BC';}
 .city-lbl{min-width:70px;font-size:12px;color:#4a5568;text-align:right;}
 .city-b{height:26px;border-radius:4px;display:flex;align-items:center;padding-left:8px;font-size:12px;color:#fff;font-weight:600;min-width:30px;}
 .ov{overflow-x:auto;}
-.section-group{background:#e8f0fd;border-radius:6px;padding:6px 10px;margin-bottom:6px;font-size:12px;font-weight:600;color:#1a3a6b;}
+.amaze-table{border-radius:8px;overflow:hidden;border:1px solid #e2e8f0;}
+.amaze-table th{background:#1a3a6b;color:#fff;}
+.amaze-table td{background:#fff;}
+.amaze-table tr:nth-child(even) td{background:#f7faff;}
 @media(max-width:600px){
   .kpi{min-width:calc(50% - 6px);}
   .section{margin:12px 12px 0;}
   td,th{padding:6px 6px;font-size:12px;}
+  .part-title{padding:8px 12px;}
 }
 </style>
 </head>
@@ -64,31 +68,64 @@ details[open] summary::before{content:'\25BC';}
 </div>
 
 <!-- ===== 第一部分：春12整体KPI ===== -->
-<div class="section" style="margin-top:16px">
-<div class="stitle">🏆 第一部分 · 春12整体 KPI（0514-0521累计）</div>
-</div>
-<div class="kpi-bar" style="background:#f7faff;border-bottom:none;padding:12px 24px;">
-  <div class="kpi accent"><div class="label">累计正常班进量</div><div class="value">1688</div><div class="sub">目标达成 51.2% / 3300</div></div>
-  <div class="kpi accent"><div class="label">T+2活跃率</div><div class="value">53.6%</div><div class="sub">活跃 905 / 1688</div></div>
-  <div class="kpi"><div class="label">总订单（含退）</div><div class="value">2389</div><div class="sub">未退款 1830</div></div>
-  <div class="kpi"><div class="label">退款率</div><div class="value">23.4%</div><div class="sub">退款 559 单</div></div>
-  <div class="kpi"><div class="label">加微率</div><div class="value">82.5%</div><div class="sub">主动加微 1121 人</div></div>
-  <div class="kpi"><div class="label">主动加微率</div><div class="value">66.4%</div><div class="sub">影子班 141（撞库 7.7%）</div></div>
+<div class="part-title">🏆 第一部分 · 春12整体 KPI（0514-0521累计）</div>
+<div class="kpi-bar" style="background:#f7faff;">
+  <div class="kpi"><div class="label">总订单（含退）</div><div class="value">2389</div><div class="sub">全部订单</div></div>
+  <div class="kpi"><div class="label">未退款订单</div><div class="value">1830</div><div class="sub">退款 559 单</div></div>
+  <div class="kpi accent"><div class="label">正常班进量</div><div class="value">1688</div><div class="sub">影子班 141｜撞库 7.7%</div></div>
+  <div class="kpi"><div class="label">退款率</div><div class="value">23.4%</div><div class="sub">退款 559 / 2389</div></div>
+  <div class="kpi"><div class="label">加微率</div><div class="value">82.5%</div><div class="sub">加微 1392 人</div></div>
+  <div class="kpi"><div class="label">主动加微率</div><div class="value">66.4%</div><div class="sub">主动加微 1121 人</div></div>
 </div>
 
-<!-- 年级达成 -->
+<!-- ① amaze进量（春12+春13） -->
 <div class="section">
-<div class="stitle">① amaze实时进量（春12累计，正常班）</div>
-<div class="card ov">
-<table>
-<thead><tr><th>年级</th><th>实时进量</th><th>目标</th><th>进度达成</th><th style="text-align:left;min-width:120px">进度条</th></tr></thead>
-<tbody>
-<tr><td>新高一</td><td>1494</td><td>2805</td><td><span class="tag tag-blue">53.3%</span></td><td style="text-align:left"><div class="pw"><div class="pb " style="width:53.3%"></div></div></td></tr><tr><td>新高二</td><td>133</td><td>330</td><td><span class="tag tag-orange">40.3%</span></td><td style="text-align:left"><div class="pw"><div class="pb " style="width:40.3%"></div></div></td></tr><tr><td>新高三</td><td>61</td><td>165</td><td><span class="tag tag-orange">37.0%</span></td><td style="text-align:left"><div class="pw"><div class="pb warn" style="width:37.0%"></div></div></td></tr>
-<tr style="font-weight:700;background:#f0f4fa"><td>合计</td><td>1688</td><td>3300</td><td><span class="tag tag-blue">51.2%</span></td><td style="text-align:left"><div class="pw"><div class="pb" style="width:51.2%"></div></div></td></tr>
-</tbody></table>
+<div class="stitle">① amaze实时进量</div>
+<div class="card">
+<div class="two-col">
+  <div>
+    <div style="font-size:12px;font-weight:700;color:#1a3a6b;margin-bottom:8px;display:flex;align-items:center;gap:6px;">
+      <span class="tag tag-blue">春12</span>
+      <span style="color:#888;font-weight:400">总计 1694 人</span>
+      <span style="color:#2563eb;font-weight:600;font-size:13px">达成 51.3%</span>
+    </div>
+    <div class="ov amaze-table">
+    <table>
+    <thead><tr><th style="text-align:left">年级</th><th>报名人数</th><th>占比</th></tr></thead>
+    <tbody>
+      <tr style="font-weight:700"><td>总计</td><td>1694</td><td>100%</td></tr>
+      <tr><td>新高一（初三）</td><td>1499</td><td>88.5%</td></tr>
+      <tr><td>新高二（高一）</td><td>133</td><td>7.9%</td></tr>
+      <tr><td>新高三（高二）</td><td>62</td><td>3.7%</td></tr>
+    </tbody>
+    </table>
+    </div>
+    <div style="margin-top:8px">
+    <div style="font-size:11px;color:#718096;margin-bottom:4px">目标达成进度（1694 / 3300）</div>
+    <div class="pw"><div class="pb" style="width:51.3%"></div></div>
+    </div>
+  </div>
+  <div>
+    <div style="font-size:12px;font-weight:700;color:#1a3a6b;margin-bottom:8px;display:flex;align-items:center;gap:6px;">
+      <span class="tag tag-orange">春13</span>
+      <span style="color:#888;font-weight:400">总计 314 人</span>
+    </div>
+    <div class="ov amaze-table">
+    <table>
+    <thead><tr><th style="text-align:left">年级</th><th>报名人数</th><th>占比</th></tr></thead>
+    <tbody>
+      <tr style="font-weight:700"><td>总计</td><td>314</td><td>100%</td></tr>
+      <tr><td>新高一（初三）</td><td>289</td><td>92.0%</td></tr>
+      <tr><td>新高二（高一）</td><td>17</td><td>5.4%</td></tr>
+      <tr><td>新高三（高二）</td><td>8</td><td>2.5%</td></tr>
+    </tbody>
+    </table>
+    </div>
+  </div>
+</div>
 </div></div>
 
-<!-- 春12渠道汇总（累计） -->
+<!-- ② 春12渠道汇总（累计） -->
 <div class="section">
 <div class="stitle">② 春12渠道汇总（累计，含撞库/T+2）</div>
 <div class="card ov">
@@ -112,13 +149,11 @@ details[open] summary::before{content:'\25BC';}
 </tbody></table>
 </div></div>
 
-<hr class="divider">
+<div class="divider" style="margin:0 0 0;"></div>
 
 <!-- ===== 第二部分：0521当日快照 ===== -->
-<div class="section">
-<div class="stitle">📅 第二部分 · 0521当日快照（春12）</div>
-</div>
-<div class="kpi-bar" style="background:#f7faff;border-bottom:none;padding:12px 24px;">
+<div class="part-title">📅 第二部分 · 0521当日快照（春12）</div>
+<div class="kpi-bar" style="background:#f7faff;">
   <div class="kpi accent"><div class="label">当日正常班进量</div><div class="value">84</div><div class="sub">影子班 9</div></div>
   <div class="kpi"><div class="label">总订单（含退）</div><div class="value">109</div><div class="sub">未退款 93</div></div>
   <div class="kpi"><div class="label">退款率（当日）</div><div class="value">14.7%</div><div class="sub">退款 16 单</div></div>
@@ -157,14 +192,11 @@ details[open] summary::before{content:'\25BC';}
 <details><summary><span class="tag tag-blue">最小年轮</span>&nbsp;正常班 76 单</summary><div class="ov" style="margin-top:6px"><table style="width:100%"><thead><tr><th>达人</th><th>正常班</th><th>加微率</th><th>主动加微率</th><th>退款率</th></tr></thead><tbody><tr><td>李老师讲初升高</td><td>32</td><td>78.1%</td><td >62.5%</td><td >10.5%</td></tr><tr><td>千佰惠公司聂老师</td><td>12</td><td>75.0%</td><td >66.7%</td><td >7.7%</td></tr><tr><td>李主任聊升学</td><td>10</td><td>80.0%</td><td style="color:#e53e3e;font-weight:600">60.0%</td><td style="color:#e53e3e;font-weight:600">26.7%</td></tr><tr><td>王老师说选科</td><td>6</td><td>83.3%</td><td >66.7%</td><td >14.3%</td></tr><tr><td>慧智升学</td><td>5</td><td>80.0%</td><td style="color:#e53e3e;font-weight:600">60.0%</td><td >0.0%</td></tr><tr><td>初升高规划闫老师</td><td>4</td><td>100.0%</td><td >75.0%</td><td style="color:#e53e3e;font-weight:600">33.3%</td></tr><tr><td>郝老师聊选科-行知</td><td>3</td><td>66.7%</td><td >66.7%</td><td style="color:#e53e3e;font-weight:600">25.0%</td></tr><tr><td>高步云衢</td><td>3</td><td>66.7%</td><td style="color:#e53e3e;font-weight:600">33.3%</td><td style="color:#e53e3e;font-weight:600">25.0%</td></tr><tr><td>慧智升学平台规划</td><td>1</td><td>100.0%</td><td >100.0%</td><td style="color:#e53e3e;font-weight:600">50.0%</td></tr></tbody></table></div></details><details><summary><span class="tag tag-blue">自然流</span>&nbsp;正常班 8 单</summary><div class="ov" style="margin-top:6px"><table style="width:100%"><thead><tr><th>达人</th><th>正常班</th><th>加微率</th><th>主动加微率</th><th>退款率</th></tr></thead><tbody><tr><td>（未知）</td><td>8</td><td>50.0%</td><td style="color:#e53e3e;font-weight:600">37.5%</td><td >7.7%</td></tr></tbody></table></div></details>
 </div></div>
 
-<hr class="divider">
+<div class="divider" style="margin:0 0 0;"></div>
 
-<!-- ===== 第三部分：春12整体汇总 ===== -->
-<div class="section">
-<div class="stitle">📊 第三部分 · 春12整体数据汇总</div>
-</div>
+<!-- ===== 第三部分：整体汇总 ===== -->
+<div class="part-title">📊 第三部分 · 春12整体数据汇总</div>
 
-<!-- 每日趋势 -->
 <div class="section">
 <div class="stitle">⑦ 每日正常班进量趋势（春12）</div>
 <div class="card ov">
@@ -174,7 +206,6 @@ details[open] summary::before{content:'\25BC';}
 </table>
 </div></div>
 
-<!-- ⑧ T+2活跃 -->
 <div class="section">
 <div class="stitle">⑧ T+2活跃率（春12累计正常班）</div>
 <div class="card">
@@ -190,8 +221,7 @@ details[open] summary::before{content:'\25BC';}
 </div>
 </div></div>
 
-<!-- ⑨ 城市线级 -->
-<div class="section" style="padding-bottom:24px">
+<div class="section" style="padding-bottom:32px">
 <div class="stitle">⑨ 城市线级分布（0521当日，春12）</div>
 <div class="card">
 <div class="city-bw"><div class="city-lbl">一线城市</div><div class="city-b" style="width:30%;background:#1a3a6b">3</div></div><div class="city-bw"><div class="city-lbl">新一线</div><div class="city-b" style="width:69%;background:#2d5aa0">17</div></div><div class="city-bw"><div class="city-lbl">二线城市</div><div class="city-b" style="width:57%;background:#3b72c8">14</div></div><div class="city-bw"><div class="city-lbl">三线城市</div><div class="city-b" style="width:85%;background:#4d8bd4">21</div></div><div class="city-bw"><div class="city-lbl">四线城市</div><div class="city-b" style="width:53%;background:#6aa3de">13</div></div><div class="city-bw"><div class="city-lbl">五线城市</div><div class="city-b" style="width:65%;background:#8cbce8">16</div></div>
